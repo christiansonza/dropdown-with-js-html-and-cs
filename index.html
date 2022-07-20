@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+      #fav{
+        float: right;
+        font-size: 12px;
+        color: rgb(155, 153, 153);
+        
+      }
+
+
+.container{
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 8px;
+}
+
+#isId,#isId2,#isId3,#isId4{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: -15px;
+    cursor: pointer;
+    display: none;
+    border-bottom: 1px solid #ccc;
+}
+#isTitle{
+    
+}
+#isTitle,#isTitle2,#isTitle3,#isTitle4{
+    transition: 0.5 ease;
+    padding-bottom:10px;
+    margin-left: 10px;
+    border-bottom: 1px solid#ccc;
+    cursor: pointer;
+  
+
+}
+#isImg{
+    display: none;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index:1;
+    margin-left: 13rem;
+    margin-top: -90px;
+    border-radius: 6px;
+    
+}
+.isMe:hover #isImg{
+  display: block;
+}
+
+.add{
+    color: rgb(16, 16, 184);
+    text-decoration: none;
+}.add:hover{
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+  <div class="container">
+<div>
+     <p id="isTitle">What is your name? <i id="fav" class="fa-solid fa-plus"></i></p>
+     <div class="isMe">
+     <p id="isId">My name is <span style="color:rgb(29, 29, 181);">Christian Sonza</span></p>
+     <img id="isImg" src="https://yt3.ggpht.com/ytc/AKedOLSq3iyE9z5XCuBOjfCnlpEvpvGGnmGyYoSriNMo=s900-c-k-c0x00ffffff-no-rj" alt="">
+     </div>
+ </div>
+ <div>
+    <p id="isTitle2">How old are you?  <i id="fav" class="fa-solid fa-plus"></i></i></p>
+    <p id="isId2">Age 21</p>
+</div>
+<div>
+    <p id="isTitle3">When is your Birthday?<i id="fav" class="fa-solid fa-plus"></i></i></p>
+    <p id="isId3">March 19, 2001</p>
+</div>
+<div>
+    <p id="isTitle4">Where do you lived?<i id="fav" class="fa-solid fa-plus"></i></i></p>
+    <p id="isId4"><a class="add" href="https://goo.gl/maps/todWnUtNyy9Y63576">San Roque Norte Cabanatuan City</a> </p>
+</div>
+
+</div>
+<script>
+
+var isId=document.getElementById('isId');
+var isTitle=document.getElementById('isTitle');
+
+isTitle.addEventListener('click', function(){
+  if(isId.style.display==='block'){
+    isId.style.display='none';
+    isTitle.style.borderBottom='1px solid #ccc'
+    isTitle.style.borderBottom='block'
+
+  }
+  else{
+    isId.style.display='block';
+    isTitle.style.borderBottom='none'
+
+  }
+})
+
+var isId2=document.getElementById('isId2');
+var isTitle2=document.getElementById('isTitle2');
+
+isTitle2.addEventListener('click', function(){
+  if(isId2.style.display==='block'){
+    isId2.style.display='none';
+    isTitle2.style.borderBottom='1px solid #ccc'
+    isTitle2.style.borderBottom='block'
+
+  }
+  else{
+    isId2.style.display='block';
+    isTitle2.style.borderBottom='none'
+
+  }
+})
+var isId3=document.getElementById('isId3');
+var isTitle3=document.getElementById('isTitle3');
+
+isTitle3.addEventListener('click', function(){
+  if(isId3.style.display==='block'){
+    isId3.style.display='none';
+    isTitle3.style.borderBottom='1px solid #ccc'
+    isTitle3.style.borderBottom='block'
+
+  }
+  else{
+    isId3.style.display='block';
+    isTitle3.style.borderBottom='none'
+
+  }
+})
+var isId4=document.getElementById('isId4');
+var isTitle4=document.getElementById('isTitle4');
+
+isTitle4.addEventListener('click', function(){
+  if(isId4.style.display==='block'){
+    isId4.style.display='none';
+    isTitle4.style.borderBottom='1px solid #ccc'
+    isTitle4.style.borderBottom='block'
+  }
+  else{
+    isId4.style.display='block';
+    isTitle4.style.borderBottom='none'
+
+  }
+})
+
+
+
+</script>
+</body>
+</html>
