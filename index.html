@@ -7,17 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
-        @media(max-width:600px){
-  .container{
-    width: 350px;
-  }
-}
       #fav{
         float: right;
         font-size: 12px;
         color: rgb(155, 153, 153);
         
       }
+
+
 .container{
     border: 1px solid #ccc;
     padding: 10px;
@@ -35,9 +32,7 @@
     display: none;
     border-bottom: 1px solid #ccc;
 }
-#isTitle{
-    
-}
+
 #isTitle,#isTitle2,#isTitle3,#isTitle4{
     transition: 0.5 ease;
     padding-bottom:10px;
@@ -48,7 +43,6 @@
 
 }
 #isImg{
-    display: none;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -56,10 +50,7 @@
     margin-left: 13rem;
     margin-top: -90px;
     border-radius: 6px;
-    
-}
-.isMe:hover #isImg{
-  display: block;
+    display: none;
 }
 
 .add{
@@ -67,6 +58,11 @@
     text-decoration: none;
 }.add:hover{
     text-decoration: underline;
+}
+@media(min-width:700px){
+  .container{
+    width: 350px;
+  }
 }
 
     </style>
@@ -76,7 +72,7 @@
 <div>
      <p id="isTitle">What is your name? <i id="fav" class="fa-solid fa-plus"></i></p>
      <div class="isMe">
-     <p id="isId">My name is <span style="color:rgb(29, 29, 181);">Christian Sonza</span></p>
+     <p id="isId">My name is <span id="christian" style="color:rgb(29, 29, 181);">Christian Sonza</span></p>
      <img id="isImg" src="https://yt3.ggpht.com/ytc/AKedOLSq3iyE9z5XCuBOjfCnlpEvpvGGnmGyYoSriNMo=s900-c-k-c0x00ffffff-no-rj" alt="">
      </div>
  </div>
@@ -98,6 +94,16 @@
 
 var isId=document.getElementById('isId');
 var isTitle=document.getElementById('isTitle');
+var chrisian=document.getElementById('christian');
+var isImg=document.getElementById('isImg');
+
+chrisian.addEventListener("click",function(){
+  isImg.style.display="block";
+})
+isImg.addEventListener("click",function(){
+  isImg.style.display="none";
+})
+
 
 isTitle.addEventListener('click', function(){
   if(isId.style.display==='block'){
